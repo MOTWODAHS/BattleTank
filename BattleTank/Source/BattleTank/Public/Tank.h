@@ -17,6 +17,9 @@ class BATTLETANK_API ATank : public APawn
 public:
 	void AimAt(FVector HitLocation);
 
+	UFUNCTION(BlueprintCallable, Category = Firing)
+		void Fire();
+
 	// Sets default values for this pawn's properties
 	ATank();
 
