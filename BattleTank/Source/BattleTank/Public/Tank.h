@@ -44,13 +44,14 @@ private:
 	UPROPERTY(EditAnywhere, Category = Firing)
 		float LaunchSpeed = 8000; // Sensible starting value of 1000 m/s
 
+	UPROPERTY(EditDefaultsOnly , Category = Firing)
+		float ReloadTimeInSeconds = 3;
+
 	UPROPERTY(EditAnywhere, Category = Setup)
 		TSubclassOf<AProjectile> ProjectileBlueprint;
 
 	// Locak barrel reference for spawning projectile
 	UTankBarrel* Barrel = nullptr;
-
-	float ReloadTimeInSeconds = 3;
 
 	double LastFireTime = 0;
 };
